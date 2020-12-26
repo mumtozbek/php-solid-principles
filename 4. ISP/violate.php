@@ -8,7 +8,7 @@ interface ProductInterface {
   public function getDownloads();
 }
 
-class DeliverableProduct implements ProductInterface {
+class RegularProduct implements ProductInterface {
   public function getDescription() {
     // return the deliverable product description
   }
@@ -18,11 +18,11 @@ class DeliverableProduct implements ProductInterface {
   }
 
   public function getDownloads() {
-    // return null
+    // return null, violating the ISP principle
   }
 }
 
-class DownloadableProduct implements ProductInterface {
+class DigitalProduct implements ProductInterface {
   public function getDescription() {
     // return the downloadable product description
   }

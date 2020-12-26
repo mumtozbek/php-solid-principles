@@ -12,7 +12,7 @@ interface DownloadableProductInterface {
   public function getDownloads();
 }
 
-class DeliverableProduct implements ProductInterface, DeliverableProductInterface {
+class RegularProduct implements ProductInterface, DeliverableProductInterface, DownloadableProductInterface {
   public function getDescription() {
     // return the deliverable product description
   }
@@ -20,9 +20,13 @@ class DeliverableProduct implements ProductInterface, DeliverableProductInterfac
   public function getDeliveryTerms() {
     // return the product delivery terms
   }
+
+  public function getDownloads() {
+    // return the product downloads
+  }
 }
 
-class DownloadableProduct implements ProductInterface, DownloadableProductInterface {
+class DigitalProduct implements ProductInterface, DownloadableProductInterface {
   public function getDescription() {
     // return the downloadable product description
   }
